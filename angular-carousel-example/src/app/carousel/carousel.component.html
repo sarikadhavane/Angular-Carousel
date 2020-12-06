@@ -1,0 +1,13 @@
+<div class="carousel">  
+<div [innerHTML]="heading" class="heading-text"></div>
+<div class="carousel-wrapper" cdkDropListOrientation="horizontal" cdkDropList (cdkDropListDropped)="drop($event)">
+    <ng-container  *ngFor="let slide of visibleSlide"  >
+        <app-slider cdkDrag [@rightAnimation]="swipeArray.rightState" [@leftAnimation]="swipeArray.leftState"  class="slideComp" [slide]="slideData[slide]"></app-slider>
+        <!-- <div class="proxy"></div> -->
+    </ng-container>
+</div>
+</div>
+<div>
+    <button class="prev-btn" (click)="btnClick('prev')"><span class="fa fa-angle-left"></span></button>
+    <button class="next-btn" (click)="btnClick('next')"><span class="fa fa-angle-right"></span></button>
+</div>

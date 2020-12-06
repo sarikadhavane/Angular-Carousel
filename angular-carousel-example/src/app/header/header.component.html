@@ -1,0 +1,37 @@
+<div class="nav-wrapper">
+  <div class="grad-bar">
+    <div class="yellow-bar"></div>
+    <div class="black-bar"></div>
+  </div>
+  <nav class="navbar">
+    <div *ngIf="devicesType==3"class="menu-icon">
+    <span class="fa fa-bars" *ngIf="!isMobileMenu" (click)="isMobileMenu = !isMobileMenu;" ></span>
+    <span class="fa fa-times" *ngIf="isMobileMenu" (click)="isMobileMenu = !isMobileMenu;"></span> 
+    </div>
+    <div class="logo">
+      <img src="assets/logo.png">
+    </div>
+    <div class="nav-item" >
+      <ul [ngClass]="{'hide-menu':!isMobileMenu}">
+        <li>Store</li>
+        <li>Product & Services</li>
+        <li>Help & Support</li>
+        <li class="on-mobile"><i class="fa fa-circle available"></i>&nbsp; PERSONAL &nbsp;
+          <i class="fa fa-angle-down"></i></li>
+      </ul>
+    </div>
+    <div class="search">
+      <form (ngSubmit)="search()">
+        <input class="search-input" [ngStyle]="{'visibility': isSearch ? 'visible' : 'hidden'}" name='searchData' [(ngModel)]="searchData" required 
+          type="text" placeholder="Search..">
+        <span class="fa fa-times" [ngStyle]="{'visibility': isSearch ? 'visible' : 'hidden'}" (click)="clearSearch()"></span>
+        <span class="fa fa-search" id="search-icon"  (click)="toggleSearch()"></span>
+      </form>
+    </div>
+    <div class="personal-item">
+      <li>
+      <i class="fa fa-circle available"></i> PERSONAL
+      <i class="fa fa-angle-down"></i></li>
+    </div>
+  </nav>
+</div>

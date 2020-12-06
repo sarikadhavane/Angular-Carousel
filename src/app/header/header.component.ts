@@ -37,6 +37,9 @@ export class HeaderComponent implements OnInit {
   clearSearch() {
     this.searchData = '';
   }
+  search(){
+    
+  }
 
 
 }

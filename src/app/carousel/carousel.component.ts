@@ -60,7 +60,7 @@ export class CarouselComponent implements OnInit {
   getScreensize(event?): void {
     if (innerWidth >= 768 && innerWidth <= 1023) {
       this.displaySlide = 3;
-    } else if (innerWidth >= 320 && innerWidth <= 768) {
+    } else if (innerWidth >= 320 && innerWidth < 768) {
       this.displaySlide = 1;
     } else if (innerWidth > 1023) {
       this.displaySlide = 5;

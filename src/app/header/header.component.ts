@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
     if (innerWidth >= 768 && innerWidth <= 1023) {
       this.devicesType = 2;
       this.isMobileMenu = false;
-    } else if (innerWidth >= 320 && innerWidth <= 768) {
+    } else if (innerWidth >= 320 && innerWidth <768) {
       this.devicesType = 3;
       this.isMobileMenu = false;
     } else if (innerWidth > 1023) {

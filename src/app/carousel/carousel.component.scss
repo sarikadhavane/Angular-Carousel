@@ -61,13 +61,23 @@
      }
      .heading-text{
         left: 10%;
-        width: 14%;
+        width: 15%;
         margin-bottom: 10px;
      }
 }
 @media only screen and (max-width: 767px) {
     .heading-text{
-        width: 90%;
+        width: auto;
+        text-align: center;
+        left:2;
         margin-bottom: 60px;
+    }
+}
+@media only screen and (max-width: 300px){
+    .heading-text{
+        width: auto;
+        text-align: center;
+        left:10px;
+        margin-bottom: 80px;
     }
 }
